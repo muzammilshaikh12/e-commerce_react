@@ -11,6 +11,12 @@ const CartItem = (props) => {
   };
   let totalAmount = 0;
   const ItemList = props.products.map((product) => {
+    const increaseQty = event => {
+    Cartctx.increaseQty(event.target.id)
+    }
+    const decreaseQty = event => {
+      Cartctx.decreaseQty(event.target.id)
+    }
     totalAmount += product.price * product.quantity;
     return (
       <div className="items" id={product.title}>
@@ -20,6 +26,10 @@ const CartItem = (props) => {
         </span>
         <span className="span">${product.price}</span>
         <span>{product.quantity}</span>
+        <div className="valdiv">
+          <button className="valbtn" onClick={increaseQty} id={product.title}>+</button>
+          <button className="valbtn" onClick={decreaseQty} id={product.title}>-</button>
+        </div>
         <span className="span">
           <button
             className="removebtn"
@@ -38,10 +48,10 @@ const CartItem = (props) => {
       {ItemList}{" "}
       <div className="total-div">
         <span className="total">Total : </span>
-        <span className="total">{totalAmount}</span>
+        <span className="total">${totalAmount}</span>
       </div>
     </Fragment>
   );
-};
+}; 
 
 export default CartItem;

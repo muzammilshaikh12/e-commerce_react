@@ -1,10 +1,20 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+
+import {Route} from 'react-router-dom'
 
 import FrontPage from "./components/FrontPage/FinalPage";
 
 import Cart from "./components/Cart/Cart";
 
 import CartProvider from "./components/store/CartProvider";
+
+import Header from "./components/FrontPage/header";
+
+import Footer from "./components/FrontPage/footer";
+
+import About from "./pages/About";
+
+import Home from "./pages/Home";
 
 function App() {
   const [CartisShown, setCartShow] = useState(false);
@@ -18,8 +28,18 @@ function App() {
   };
   return (
     <CartProvider>
-      <FrontPage cartFunc={cartShowHandler}/>
-      {CartisShown && <Cart cartFunc={cartRemoveHandler}/>}
+      <Header cartFunc={cartShowHandler} />
+      <Route path='/store'>
+        <FrontPage />
+      </Route>
+      <Route path='/about'>
+        <About />
+      </Route>
+      <Route path='/home'>
+        <Home/>
+      </Route>
+    {CartisShown && <Cart cartFunc={cartRemoveHandler} />}
+      <Footer />
     </CartProvider>
   );
 }

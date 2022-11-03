@@ -1,0 +1,76 @@
+.subHeader {
+    height: 200px;
+    width: auto;
+    background-color: grey;
+    padding: 0px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+  }
+
+  .col-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .latest-album {
+    height: 100px;
+    width: 270px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    font-size: 30px;
+    cursor: pointer;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .bike {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 50px;
+    /* background-color: black; */
+    color: black;
+    margin: 1rem 36.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+      width: 300px;
+  }
+
+  .venue {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 80px;
+  }
+
+  .details {
+    margin: 2rem;
+    width: 175px;
+  }
+
+  .hr {
+    width: 1200px;
+  }
+
+  .mybutton {
+    border: 2px white;
+    background-color: black;
+    border-radius: 8px;
+    height: 45px;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+  }
+
+
+  

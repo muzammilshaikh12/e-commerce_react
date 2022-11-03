@@ -39,3 +39,23 @@
       .total-div{
         margin-top: 1rem;
       }
+
+      .valbtn{
+       width: 2rem;
+       color: black;
+       border: 1px solid black;
+       border-radius: 5px ;
+       cursor: pointer;
+       margin: 1px;
+      }
+
+      .valbtn:hover,
+      .valbtn :active {
+        background-color: black;
+        border-color:  black;
+        color: white
+      }
+
+      .valdiv{
+        margin-left: 1.5rem;
+      }
