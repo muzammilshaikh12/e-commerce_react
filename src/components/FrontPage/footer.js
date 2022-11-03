@@ -13,18 +13,18 @@ const Footer = () => {
         </h4>
       </div>
       <div className="footer2">
-        <a href="https://www.youtube.com" className='anchor'>
+        <a href="https://github.com/muzammilshaikh12" className='anchor'>
           <img
-            src="https://www.bing.com/th?id=OIP.3yLsbW3kJ5zU9-957TR_mQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
-            alt="Youtube"
+            src="https://www.bing.com/th?id=OIP.ckeUFk-yid0vfWnd56w7wAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+            alt="GitHub"
             height="25px"
             width="25px"
           />
         </a>
-        <a href="https://spotify.com" className='anchor'>
+        <a href="https://www.linkedin.com/in/muzammil-shaikh-90b278184/" className='anchor'>
           <img
-            src="https://www.bing.com/th?id=OIP.Lrxsd7qE1xlNSo9qczRXHgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
-            alt="Spotify"
+            src="https://www.bing.com/th?id=OIP.X-3PgW1kZj3OFpeSAXjxuwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+            alt="LinkedIn"
             height="25px"
             width="25px"
           />

@@ -6,7 +6,7 @@ import './CartBtn.css'
 
 
 const CartButton = props => {
-    return <button className='button'>
+    return <button className='button' onClick={props.cartFunc}> 
         <span className='icon'><CartIcon /></span>
         <span>Your Cart</span>
         <span className='badge'>0</span>

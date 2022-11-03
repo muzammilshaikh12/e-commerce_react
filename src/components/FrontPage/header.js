@@ -10,7 +10,7 @@ const Header = (props) => {
       <span className="anchor">Home</span>
       <span className="anchor">Store</span>
       <span className="anchor">About</span>
-      <CartButton />
+      <CartButton cartFunc={props.cartFunc}/>
     </header>
   );
 };

@@ -11,9 +11,9 @@ import Footer from './footer'
 const FrontPage = (props) => {
   return (
     <Fragment>
-      <Header />
+      <Header cartFunc={props.cartFunc}/>
       <Summary />
-      <Products productarray={props.products}/>
+      <Products/>
       <Footer />
     </Fragment>
   );

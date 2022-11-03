@@ -1,0 +1,54 @@
+.cart-title{
+  margin-left: 40%;
+  margin-bottom: 2rem;
+}
+
+.actions {
+    text-align: right;
+    margin-top: 0.5rem;
+  }
+  
+  .actions button {
+    font: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+  }
+  
+  .actions button:hover,
+  .actions button:active {
+    background-color: black;
+    border-color: black;
+    color: white;
+  }
+  
+  .actions .button--alt {
+    color: black;
+  }
+  
+  .actions .order {
+    background-color: white;
+    color: black;
+  }
+
+  .title{
+    margin: 0 1.5rem;
+  }
+
+  .price{
+    margin: 0 2rem;
+    margin-left: 10rem;
+  }
+
+  .quantity{
+    margin-left: 0.2rem;
+  }
+
+  .cart-header{
+    font-size: 25px;
+    border-bottom: 1px solid black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  }
