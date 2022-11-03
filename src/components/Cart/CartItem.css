@@ -20,6 +20,7 @@
         color: black;
         border-radius: 5px;
         cursor: pointer;
+        margin-left: 3rem;
     }
 
     .removebtn:hover,
@@ -28,3 +29,13 @@
       border-color:  black;
       color: white
     }
+
+    .total{
+        margin: 1rem;
+        font-size: 25px;
+       
+      }
+    
+      .total-div{
+        margin-top: 1rem;
+      }

@@ -4,6 +4,8 @@ import FrontPage from "./components/FrontPage/FinalPage";
 
 import Cart from "./components/Cart/Cart";
 
+import CartProvider from "./components/store/CartProvider";
+
 function App() {
   const [CartisShown, setCartShow] = useState(false);
 
@@ -15,10 +17,10 @@ function App() {
     setCartShow(false);
   };
   return (
-    <div>
+    <CartProvider>
       <FrontPage cartFunc={cartShowHandler}/>
       {CartisShown && <Cart cartFunc={cartRemoveHandler}/>}
-    </div>
+    </CartProvider>
   );
 }
 
