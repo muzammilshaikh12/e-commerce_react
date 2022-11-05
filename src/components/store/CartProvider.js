@@ -4,7 +4,7 @@ import CartContext from "./CartContext";
 
 const CartProvider = (props) => {
   const [items, setItems] = useState([]);
-  console.log(items);
+  // console.log(items);
   const addItemtoCartHandler = (item) => {
     let hasItems = false;
     const newArray = [...items];
@@ -64,7 +64,7 @@ const CartProvider = (props) => {
   return (
     <CartContext.Provider value={cartContext}>
       {props.children}
-      {console.log(cartContext.items, "After-Rerendering !!!!!")}
+      {/* {console.log(cartContext.items, "After-Rerendering !!!!!")} */}
     </CartContext.Provider>
   );
 };

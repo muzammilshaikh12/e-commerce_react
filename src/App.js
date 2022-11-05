@@ -16,6 +16,8 @@ import About from "./pages/About";
 
 import Home from "./pages/Home";
 
+import ContactUs from "./pages/ContactUs";
+
 function App() {
   const [CartisShown, setCartShow] = useState(false);
 
@@ -26,6 +28,10 @@ function App() {
   const cartRemoveHandler = () => {
     setCartShow(false);
   };
+
+  const contactedUserDetails = (userdata) => {
+    console.log(userdata)
+  }
   return (
     <CartProvider>
       <Header cartFunc={cartShowHandler} />
@@ -37,6 +43,9 @@ function App() {
       </Route>
       <Route path='/home'>
         <Home/>
+      </Route>
+      <Route path='/contact'>
+        <ContactUs contactDetails={contactedUserDetails}/>
       </Route>
     {CartisShown && <Cart cartFunc={cartRemoveHandler} />}
       <Footer />

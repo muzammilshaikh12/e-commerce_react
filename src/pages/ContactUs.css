@@ -1,0 +1,41 @@
+.cntform{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 11% 37.5%;
+    border: 2px solid black;
+    height: 17.5rem;
+    border-radius: 7.5px;
+}
+
+.name{
+    margin: 1rem;
+    display: flex;
+    text-align: left;
+}
+
+.email{
+    margin: 1rem;
+    display: flex;
+    text-align: left;
+}
+
+.number{
+    margin: 1rem;
+    display: flex;
+    text-align: left;
+}
+
+.label{
+    width:6rem
+}
+
+.cntbtn{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border-color: white;
+    width: 7rem;
+}
+

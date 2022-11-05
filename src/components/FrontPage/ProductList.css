@@ -1,10 +1,11 @@
 .albums {
-    margin: 60px;
+    margin: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 25px;
+   
   }
 
   .images {
@@ -21,3 +22,5 @@
     color: white;
     cursor: pointer;
   }
+
+ 

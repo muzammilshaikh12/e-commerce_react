@@ -12,6 +12,7 @@ const Header = (props) => {
       <Link className="anchor" to='/home'>Home</Link>
       <Link className="anchor" to='/store'>Store</Link>
       <Link className="anchor" to='/about'>About</Link>
+      <Link className="anchor" to='/contact'>Contact Us</Link>
       <CartButton cartFunc={props.cartFunc}/>
     </header>
   );
