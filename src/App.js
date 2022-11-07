@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 
-import {Route} from 'react-router-dom'
+import { Route } from "react-router-dom";
 
 import FrontPage from "./components/FrontPage/FinalPage";
 
@@ -18,6 +18,8 @@ import Home from "./pages/Home";
 
 import ContactUs from "./pages/ContactUs";
 
+import ProductDetail from "./pages/ProductDetail";
+
 function App() {
   const [CartisShown, setCartShow] = useState(false);
 
@@ -29,25 +31,53 @@ function App() {
     setCartShow(false);
   };
 
-  const contactedUserDetails = (userdata) => {
-    console.log(userdata)
-  }
+  const contactedUserDetails = async (userdata) => {
+    fetch(
+      "https://dummy-react-f2cd7-default-rtdb.firebaseio.com/userDetails.json",
+      {
+        method: "POST",
+        body: JSON.stringify(userdata),
+        header: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return response.json().then((error) => {
+            throw new Error(error.error.message);
+          });
+        }
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
   return (
     <CartProvider>
       <Header cartFunc={cartShowHandler} />
-      <Route path='/store'>
+      {CartisShown && <Cart cartFunc={cartRemoveHandler} />}
+      <Route path="/store">
         <FrontPage />
       </Route>
-      <Route path='/about'>
+      <Route path="/about">
         <About />
       </Route>
-      <Route path='/home'>
-        <Home/>
+      <Route path="/home">
+        <Home />
       </Route>
-      <Route path='/contact'>
-        <ContactUs contactDetails={contactedUserDetails}/>
+      <Route path="/contact">
+        <ContactUs contactDetails={contactedUserDetails} />
       </Route>
-    {CartisShown && <Cart cartFunc={cartRemoveHandler} />}
+      <Route path="/products/:productId">
+        <ProductDetail />
+      </Route>
+    
       <Footer />
     </CartProvider>
   );

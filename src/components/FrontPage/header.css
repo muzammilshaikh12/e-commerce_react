@@ -9,6 +9,7 @@
     padding: 0px;
     border: 1px solid black;
     cursor: pointer;
+  
      }
 
   .anchor {
@@ -16,7 +17,8 @@
     font-size: 20px;
     color: white;
     text-decoration: none;
-   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
   }
 
  

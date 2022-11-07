@@ -1,4 +1,6 @@
-import { useContext } from "react";
+import { useContext,  } from "react";
+
+import { Link } from "react-router-dom";
 
 import "./ProductList.css";
 
@@ -11,9 +13,10 @@ const ProductList = (props) => {
     event.preventDefault();
     Cartctx.addItem({ ...props.products, quantity: 1 });
   };
+  let productId = `products/${props.products.id}`
   return (
     <div className="albums">
-      <h3 className="title">{props.products.title}</h3>
+      <h3 className="title"><Link to={productId} className='prodlink'>{props.products.title}</Link></h3>
       <img
         className="images"
         src={props.products.imgsrc}

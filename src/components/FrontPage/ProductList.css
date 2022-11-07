@@ -23,4 +23,9 @@
     cursor: pointer;
   }
 
+  .prodlink{
+    text-decoration: none;
+    color: black;
+  }
+
  

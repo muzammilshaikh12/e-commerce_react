@@ -1,0 +1,37 @@
+.maindiv{
+    display: flex;
+}
+
+.detail-images{
+    height: 8rem;
+    width: 9rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.enlarged{
+    margin-top: 0rem;
+    margin-left:25%;
+    height: 25rem;
+    width: 35rem;
+    position: relative;
+}
+
+.enlarged-image{
+    height: 20rem;
+    width: 35rem;
+}
+
+.pics{
+    margin: 1rem;
+    border: 2px solid black;
+}
+.reviews{
+    margin-left: 33%;
+    margin-bottom: 5rem;
+}
+
+.heading{
+    text-align: center;
+}
