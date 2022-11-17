@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 
-import { Route } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import FrontPage from "./components/FrontPage/FinalPage";
 
@@ -20,7 +20,16 @@ import ContactUs from "./pages/ContactUs";
 
 import ProductDetail from "./pages/ProductDetail";
 
+import Login from "./pages/login";
+
+import AuthContext from "./components/store/AuthContext";
+import { useContext } from "react";
+
 function App() {
+  const Authctx = useContext(AuthContext)
+
+  const isLoggedIn = Authctx.isLoggedIn
+
   const [CartisShown, setCartShow] = useState(false);
 
   const cartShowHandler = () => {
@@ -62,9 +71,10 @@ function App() {
     <CartProvider>
       <Header cartFunc={cartShowHandler} />
       {CartisShown && <Cart cartFunc={cartRemoveHandler} />}
-      <Route path="/store">
+      <Switch>
+      {isLoggedIn && <Route path="/products" exact>
         <FrontPage />
-      </Route>
+      </Route>}
       <Route path="/about">
         <About />
       </Route>
@@ -77,7 +87,11 @@ function App() {
       <Route path="/products/:productId">
         <ProductDetail />
       </Route>
-    
+      <Route path="/login">
+        <Login />
+      </Route>
+      <Route path='*'><Redirect to='/login'/></Route>
+      </Switch>
       <Footer />
     </CartProvider>
   );

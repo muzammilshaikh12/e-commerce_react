@@ -21,4 +21,13 @@
    
   }
 
+  .logoutbtn {
+   color: white;
+   background-color: black;
+   margin-top: 0.8rem;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 20px;
+   cursor: pointer;
+  }
+
  

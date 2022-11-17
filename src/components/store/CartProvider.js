@@ -41,15 +41,19 @@ const CartProvider = (props) => {
     console.log(newArray);
     newArray.forEach((element, index) => {
       if (element.title === title) {
-        if(newArray[index].quantity>1)
-        newArray[index].quantity = Number(newArray[index].quantity) - 1;
+        if (newArray[index].quantity > 1)
+          newArray[index].quantity = Number(newArray[index].quantity) - 1;
         setItems(newArray);
       }
     });
-   
   };
 
-  const placingOrder = () => {};
+  const placingOrder = () => {
+    setItems([]);
+    alert(
+      "Order has been successfully placed !!!!, Keep shopping from the Biker Zone"
+    );
+  };
 
   const cartContext = {
     items: items,
